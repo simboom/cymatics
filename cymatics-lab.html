@@ -596,7 +596,7 @@ function render(pl, showProbe){
   const bx=(S.drive[0]+1)/2*W, by=(S.drive[1]+1)/2*W;
   cx.save(); cx.beginPath(); cx.arc(bx,by,W*0.014,0,7); cx.fillStyle='#3a3d42'; cx.fill(); cx.lineWidth=1.5; cx.strokeStyle='#666b72'; cx.stroke();
   cx.beginPath(); cx.arc(bx,by,W*0.006,0,7); cx.fillStyle='#55595f'; cx.fill(); cx.restore();
-  if(showProbe && !document.body.classList.contains('film')){
+  if(showProbe && !rec && !document.body.classList.contains('film')){
     const sx=(S.probe[0]+1)/2*W, sy=(S.probe[1]+1)/2*W;
     cx.save(); cx.strokeStyle='#7fb8d6'; cx.lineWidth=2; cx.strokeRect(sx-8,sy-8,16,16); cx.beginPath(); cx.moveTo(sx-14,sy); cx.lineTo(sx+14,sy); cx.moveTo(sx,sy-14); cx.lineTo(sx,sy+14); cx.stroke(); cx.restore(); }
 }
